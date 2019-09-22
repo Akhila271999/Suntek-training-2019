@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+char s[100];
+int i,j,k,n,count=1;
+printf("enter a string");
+gets(s);
+for(j=0;s[j];j++)
+n=j;
+printf("count frequency character");
+for(i=0;i<n;i++)
+{
+if(s[i])
+{
+for(j=i+1;j<n;j++)
+{
+if(s[i]==s[j])
+{
+count++;
+s[j]="\0";
+}
+}
+printf("%c %d\n",s[j],count);
+}
+}
+return 0;
+}
